@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Runner
+
 @onready var _dust: GPUParticles2D = %dust
 
 
@@ -8,6 +10,27 @@ extends CharacterBody2D
 @export var deceleration := 1080.0 
 
 @onready var _runner_visual: RunnerVisual = %RunnerVisualRed
+
+signal walked_to 
+
+func walk_to(destination_global_position: Vector2) -> void:
+	var direction := global_position.direction_to(destination_global_position)
+	var distance := global_position.distance_to(destination_global_position)
+	var duration := distance / (max_speed * 0.2)
+	
+	_runner_visual.angle = direction.orthogonal().angle()
+	_runner_visual.animation_name = RunnerVisual.Animations.WALK
+	_dust.emitting = true
+	
+	var tween := create_tween()
+	tween.tween_property(self, "global_position", destination_global_position, duration)
+	tween.finished.connect(func():
+		_runner_visual.animation_name = RunnerVisual.Animations.IDLE
+		_dust.emitting = false
+		walked_to.emit()
+	)
+	
+
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left","move_right", "move_up", "move_down")

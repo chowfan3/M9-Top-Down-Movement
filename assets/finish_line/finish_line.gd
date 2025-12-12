@@ -86,3 +86,4 @@ func pop_confettis() -> void:
 	_confettis_area.confettis_radius = confettis_radius
 	_confettis_area.confettis_pop_time_delay = confettis_pop_time_delay
 	_confettis_area.pop_confettis()
+	
