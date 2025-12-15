@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c62bk8cggi6yq"]
+[gd_scene load_steps=16 format=3 uid="uid://c62bk8cggi6yq"]
 
 [ext_resource type="Script" uid="uid://5nrf8ebgtofs" path="res://lessons/game.gd" id="1_cpqg5"]
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_gkp25"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="6_48faf"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="8_tpjcj"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="9_8c4bg"]
+[ext_resource type="PackedScene" uid="uid://dj6ye05dbiqpi" path="res://lessons/pause_screen.tscn" id="10_8c4bg"]
 
 [sub_resource type="Curve" id="Curve_48faf"]
 _data = [Vector2(0.90621907, 1), 0.0, 0.0, 0, 0, Vector2(0.9960513, 0), 0.0, 0.0, 0, 0]
@@ -87,3 +88,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_8c4bg")
 metadata/_custom_type_script = "uid://57e8080cpukf"
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("10_8c4bg")]
+menu_opened_amount = 1.0
