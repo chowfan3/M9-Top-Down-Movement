@@ -91,3 +91,4 @@ metadata/_custom_type_script = "uid://57e8080cpukf"
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("10_8c4bg")]
 menu_opened_amount = 1.0
+animation_duration = 2.3
