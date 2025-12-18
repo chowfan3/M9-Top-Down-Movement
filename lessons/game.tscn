@@ -40,6 +40,7 @@ script = ExtResource("1_cpqg5")
 
 [node name="Bouncer" parent="." instance=ExtResource("2_2l282")]
 unique_name_in_owner = true
+position = Vector2(-772, -825)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -48,7 +49,7 @@ texture = ExtResource("1_gkp25")
 
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 unique_name_in_owner = true
-position = Vector2(-991, 788)
+position = Vector2(-146, -842)
 
 [node name="Camera2D" type="Camera2D" parent="Runner"]
 position = Vector2(-6, 166)
@@ -67,7 +68,7 @@ area_width = 256
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_4o7yg")]
 z_index = 1
-position = Vector2(-747, 713)
+position = Vector2(-1047, -595)
 
 [node name="Circuit" parent="." instance=ExtResource("4_sepuf")]
 
@@ -96,3 +97,15 @@ metadata/_custom_type_script = "uid://57e8080cpukf"
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("10_8c4bg")]
 menu_opened_amount = 1.0
 animation_duration = 2.3
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_4o7yg")]
+z_index = 1
+position = Vector2(-959, -744)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_4o7yg")]
+z_index = 1
+position = Vector2(-615, -847)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_4o7yg")]
+z_index = 1
+position = Vector2(-255, -947)
